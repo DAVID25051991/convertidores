@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Vectores</title>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 676px)" />
+
+    <!-- formatos de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Calculadora de Vectores </h1>
+    </header>
+    <main>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <section class="main__input">
+        <select class="main__input--select" name="calcs" id="calcs" onchange="cambiarVisual()">
+          <option value="cartesiana_a_polar">Cartesiana a polar</option>
+          <option value="polar_a_cartesiana">Polar a cartesiana</option>
+        </select>
+        <span class="input__declaration"><span class="span__arrow">→</span> v = (</span>
+        <input class="main__input--text" id="firstParameter" type="number" onchange="start()" />
+        <span class="input__declaration">;</span>
+        <input class="main__input--text" id="secondParameter" type="number" onchange="start()" />
+        <span class="input__declaration"><span id="degree-symbol" class="degree-symbol">°</span> )</span>
+      </section>
+      <section class="main__result">
+        <p class="main__result--output" id="output"></p>
+        <div class="main__result--chart">
+          <!-- canvas sirve para hacer diseños graficos es un ejecutor  -->
+          <canvas id="myChart" width="600" height="600"></canvas>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>Echo por: David Esteban Echevrri Cardenas</p>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
